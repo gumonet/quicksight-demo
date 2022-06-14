@@ -49,14 +49,21 @@ $result = $client->generateEmbedUrlForAnonymousUser([
 ?>
 
 <!DOCTYPE html>
-    <html>
+    <html lang="en">
 
     <head>
         <title>Basic Embed</title>
         <!-- You can download the latest QuickSight embedding SDK version from https://www.npmjs.com/package/amazon-quicksight-embedding-sdk -->
         <!-- Or you can do "npm install amazon-quicksight-embedding-sdk", if you use npm for javascript dependencies -->
     </head>
-
+    <style>
+        body{
+            display: flex;
+            position: relative;
+            height: auto;
+            flex-direction: column;
+        }
+    </style>
     <!-- You can download the latest QuickSight embedding SDK version from https://www.npmjs.com/package/amazon-quicksight-embedding-sdk -->
     <!-- Or you can do "npm install amazon-quicksight-embedding-sdk", if you use npm for javascript dependencies -->
     <script src="https://unpkg.com/amazon-quicksight-embedding-sdk@1.19.0/dist/quicksight-embedding-js-sdk.min.js"></script>
@@ -72,7 +79,7 @@ $result = $client->generateEmbedUrlForAnonymousUser([
                 container: containerDiv,
                 scrolling: "no",
                 height: "700px",
-                width: "1000px",
+                width: "100%",
                 footerPaddingEnabled: true
             };
             dashboard = QuickSightEmbedding.embedDashboard(options);
@@ -81,7 +88,7 @@ $result = $client->generateEmbedUrlForAnonymousUser([
 
     <body onload="embedDashboard()">
         <h2>Demo</h2>
-        <a href="<?php echo $result->get('EmbedUrl'); ?>"> <?php echo $result->get('EmbedUrl'); ?></a>
+
 
         <div id="embeddingContainer"></div>
     </body>
