@@ -64,8 +64,6 @@ if( isset($_GET['fi']) ) {
     <script src="https://unpkg.com/amazon-quicksight-embedding-sdk@1.19.0/dist/quicksight-embedding-js-sdk.min.js"></script>
     <script type="text/javascript">
         var dashboard;
-
-        <?php if( $report_id !== 'null'){ ?>
                 function embedDashboard() {
                     var containerDiv = document.getElementById("embeddingContainer");
                     var options = {
@@ -78,7 +76,6 @@ if( isset($_GET['fi']) ) {
                     };
                     dashboard = QuickSightEmbedding.embedDashboard(options);
                 }
-        <?php } ?>
     </script>
 
     <body onload="embedDashboard()">
