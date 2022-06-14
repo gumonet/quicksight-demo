@@ -24,6 +24,9 @@ if( isset($_GET['fi']) ) {
         case 'castor':
             $report_id = 'f3cb72cd-89e0-4928-875d-8364d0e5ca7e';
             break;
+        case 'default':
+            $report_id = '3193f098-a090-4b47-b186-e7acc04a76b6';
+            break;
         default:
             break;
     }
