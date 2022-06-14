@@ -19,10 +19,10 @@ if( isset($_GET['fi']) ) {
     $report_id = 'null';
     switch ( $_GET['fi'] ){
         case 'dinn':
-            $report_id = '579936e5-a857-4ba7-87d3-8f26b08a5151';
+            $report_id = 'f3cb72cd-89e0-4928-875d-8364d0e5ca7e';
             break;
         case 'castor':
-            $report_id = ' 579936e5-a857-4ba7-87d3-8f26b08a5151';
+            $report_id = 'f3cb72cd-89e0-4928-875d-8364d0e5ca7e';
             break;
         default:
             break;
