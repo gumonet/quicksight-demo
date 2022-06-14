@@ -6,7 +6,7 @@ use  \Aws\QuickSight\QuickSightClient;
 
 
 
-if( isset($_GET['if']) ) {
+if( isset($_GET['fi']) ) {
     $client = new QuickSightClient([
         'region' => 'us-east-1',
         'version' => 'latest',
@@ -83,7 +83,6 @@ if( isset($_GET['if']) ) {
 
     <body onload="embedDashboard()">
         <h2>Demo</h2>
-
 
         <div id="embeddingContainer"></div>
     </body>
