@@ -1,1 +1,33 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Basic Embed</title>
+        <!-- You can download the latest QuickSight embedding SDK version from https://www.npmjs.com/package/amazon-quicksight-embedding-sdk -->
+        <!-- Or you can do "npm install amazon-quicksight-embedding-sdk", if you use npm for javascript dependencies -->
+        <script src="https://unpkg.com/amazon-quicksight-embedding-sdk@1.19.0/dist/quicksight-embedding-js-sdk.min.js"></script>
+        <script type="text/javascript">
+            var dashboard;
+
+            function embedDashboard() {
+                var containerDiv = document.getElementById("embeddingContainer");
+                var options = {
+                    // replace this dummy url with the one generated via embedding API
+                    //https://us-east-1.quicksight.aws.amazon.com/sn/accounts/565752272958/dashboards/519a1485-34e5-4cd5-b829-e620be6ff705?directory_alias=reworth
+                    url: "https://us-east-1.quicksight.aws.amazon.com/embed/3bd226208c2e4285bb028fef95a08b10/dashboards/15febea5-78b6-419a-a2d0-d75f73b289ab?code=AYABeBCVdSYE08b8mXo8tkbxXgoAAAABAAdhd3Mta21zAEthcm46YXdzOmttczp1cy1lYXN0LTE6MjU5NDgwNDYyMTMyOmtleS81NGYwMjdiYy03MDJhLTQxY2YtYmViNS0xNDViOTExNzFkYzMAuAECAQB4EeOLgrUr51nsHbjCawUUKjOqEm284CNxqOjvtm6TGiwBBFVCd-aT07nN7QmdCpxy9gAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDLzbJ7qaHrvCYC03MwIBEIA7MhaHGSoeCKtGZurK1C0ctXi8FWVUeHqNXkCGGqudAS5kq0l0MaX-kbOOArggZ2tpu5FtA30IgxBfkicCAAAAAAwAABAAAAAAAAAAAAAAAAAAq8r9nyPIntxi9YlaM07s1P____8AAAABAAAAAAAAAAAAAAABAAAAm_tn7eyIrWAgyIHMR1rGWqINBgYneZFold-IPS0_1QFDsGdSuB8Nf0zPUaA7_PvLh94DopvD65rvGR-bH9_gO3Q0Y0gE0bjQecVCrwyahd_P8Qz2e35XNMRaKSk7A9CLzOagClBgNGIB6qKsbognEkUaLbNannLd1TRUFKxin7SYGXQs0EFZaZKfUDoiiAzJwrqHvmDt6fuGaEXJKmnMMDeqNBGXKYZ1EJtvyA%3D%3D&identityprovider=quicksight&isauthcode=true",  
+                    container: containerDiv,
+                    scrolling: "no",
+                    height: "700px",
+                    width: "1000px",
+                    footerPaddingEnabled: true
+                };
+                dashboard = QuickSightEmbedding.embedDashboard(options);
+            }
+        </script>
+    </head>
+
+    <body onload="embedDashboard()">
+        <div id="embeddingContainer"></div>
+    </body>
+
+    </html>
