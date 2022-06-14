@@ -17,7 +17,7 @@ if( isset($_GET['if']) ) {
     ]);
 
     $report_id = 'null';
-    switch ( $_GET ){
+    switch ( $_GET['fi'] ){
         case 'dinn':
             $report_id = '579936e5-a857-4ba7-87d3-8f26b08a5151';
             break;
