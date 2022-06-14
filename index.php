@@ -19,10 +19,10 @@ if( isset($_GET['if']) ) {
     $report_id = 'null';
     switch ( $_GET ){
         case 'dinn':
-            $report_id = '565752272958:dashboard/3193f098-a090-4b47-b186-e7acc04a76b6';
+            $report_id = '579936e5-a857-4ba7-87d3-8f26b08a5151';
             break;
         case 'castor':
-            $report_id = '565752272958:dashboard/3193f098-a090-4b47-b186-e7acc04a76b6';
+            $report_id = ' 579936e5-a857-4ba7-87d3-8f26b08a5151';
             break;
         default:
             break;
@@ -78,7 +78,7 @@ if( isset($_GET['if']) ) {
                     };
                     dashboard = QuickSightEmbedding.embedDashboard(options);
                 }
-        <?php }?>
+        <?php } ?>
     </script>
 
     <body onload="embedDashboard()">
