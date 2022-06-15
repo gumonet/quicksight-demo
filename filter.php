@@ -61,7 +61,7 @@ use  \Aws\QuickSight\QuickSightClient;
                         width: "100%",
                         footerPaddingEnabled: true,
                         parameters: {
-                            "FnzInst": <?php echo $_GET['fi']; ?>
+                            "FnzInst": '<?php echo $_GET['fi']; ?>'
                         },
                     };
                     dashboard = QuickSightEmbedding.embedDashboard(options);
