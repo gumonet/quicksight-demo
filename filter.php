@@ -16,7 +16,7 @@ if( isset($_GET['fi']) ) {
         ]
     ]);
 
-    $report_id = '3193f098-a090-4b47-b186-e7acc04a76b6';
+    $report_id = '519a1485-34e5-4cd5-b829-e620be6ff705';
 
     $result = $client->generateEmbedUrlForAnonymousUser([
         'AuthorizedResourceArns' => ['arn:aws:quicksight:us-east-1:565752272958:dashboard/' . $report_id ], // REQUIRED
@@ -64,7 +64,7 @@ if( isset($_GET['fi']) ) {
                         width: "100%",
                         footerPaddingEnabled: true,
                         parameters: {
-                            "Institución Financiera": "castor"
+                            "region": "EMEA"
                         },
                     };
                     dashboard = QuickSightEmbedding.embedDashboard(options);
