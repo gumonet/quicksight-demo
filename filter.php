@@ -13,7 +13,8 @@ use  \Aws\QuickSight\QuickSightClient;
         ]
     ]);
 
-    $report_id = '519a1485-34e5-4cd5-b829-e620be6ff705';
+    //$report_id = '519a1485-34e5-4cd5-b829-e620be6ff705';
+    $report_id = '2ab0b40b-ed60-49d7-8059-8020c7fbba1d';
 
     $result = $client->generateEmbedUrlForAnonymousUser([
         'AuthorizedResourceArns' => ['arn:aws:quicksight:us-east-1:565752272958:dashboard/' . $report_id ], // REQUIRED
@@ -60,7 +61,7 @@ use  \Aws\QuickSight\QuickSightClient;
                         width: "100%",
                         footerPaddingEnabled: true,
                         parameters: {
-                            "region": "APAC"
+                            "FnzInst": <?php echo $_GET['fi']; ?>
                         },
                     };
                     dashboard = QuickSightEmbedding.embedDashboard(options);
