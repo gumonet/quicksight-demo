@@ -22,7 +22,10 @@ if( isset($_GET['fi']) ) {
             $report_id = 'f3cb72cd-89e0-4928-875d-8364d0e5ca7e';
             break;
         case 'castor':
-            $report_id = 'f3cb72cd-89e0-4928-875d-8364d0e5ca7e';
+            $report_id = 'd2f31441-d9f2-4a38-9a76-6ff7a9468fe5';
+            break;
+        case 'cellpay':
+            $report_id = '07155726-e358-4cee-af6d-c253d57a082f';
             break;
         case 'default':
             $report_id = '3193f098-a090-4b47-b186-e7acc04a76b6';
