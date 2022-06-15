@@ -60,7 +60,7 @@ use  \Aws\QuickSight\QuickSightClient;
                         width: "100%",
                         footerPaddingEnabled: true,
                         parameters: {
-                            "region": "EMEA"
+                            "region": "APAC"
                         },
                     };
                     dashboard = QuickSightEmbedding.embedDashboard(options);
