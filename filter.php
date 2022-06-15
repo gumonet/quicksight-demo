@@ -4,9 +4,6 @@ require 'vendor/autoload.php';
 
 use  \Aws\QuickSight\QuickSightClient;
 
-
-
-if( isset($_GET['fi']) ) {
     $client = new QuickSightClient([
         'region' => 'us-east-1',
         'version' => 'latest',
@@ -29,7 +26,6 @@ if( isset($_GET['fi']) ) {
         'Namespace' => 'default', // REQUIRED
         //'SessionLifetimeInMinutes' => 15,
     ]);
-}
 
 ?>
 
